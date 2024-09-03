@@ -1,0 +1,18 @@
+{
+    "locations":[
+        {
+            "id": 1,
+            "name":"Housing one",
+            "imagePath":"assets/house_1.jpg",
+            "city":"Colombo",
+            "wifi":true
+          },
+          {
+            "id": 2,
+            "name":"Housing two",
+            "imagePath":"assets/house_2.jpg",
+            "city":"Kandy",
+            "wifi":false
+          }
+    ]
+}

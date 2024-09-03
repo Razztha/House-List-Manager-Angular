@@ -1,0 +1,18 @@
+<section class="mb-3">
+    <form>
+        <div class="form-group row">
+            <div class="col-md-4">
+                <input type="text" placeholder="city" class="form-control" #filter/>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary" (click)="filterResults(filter.value)">Search</button>
+            </div>
+        </div>
+    </form>
+</section>
+<section class="results row">
+    <app-housinglocation class="col-md-3"
+  *ngFor="let housingLoc of filteredHousingLocationList"
+  [housingLocation]="housingLoc">
+</app-housinglocation>
+</section>

@@ -1,0 +1,29 @@
+<h5>Details of house : {{housingLocation?.name}}</h5>
+<a [routerLink]="['/']" class="btn btn-success mb-1">Back to Home</a>
+<div class="row">
+    <div class="card col-md-6" style="width: 18rem;">
+        <img class="card-img-top mt-2" [src]="housingLocation?.imagePath" alt="house">
+        <div class="card-body">
+          <h6 class="card-title">{{housingLocation?.name}}</h6>
+          <h6 class="card-title">{{housingLocation?.city}}</h6>
+          <p class="card-text">
+            <input disabled type="checkbox" [checked]="housingLocation?.wifi" /> Wifi Available
+          </p>
+        </div>
+    </div>
+    <div class="col-md-4" >
+        <form [formGroup]="applyForm" (submit)="submitApplication()">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input class="form-control" id="first-name" type="text" formControlName="firstName" placeholder="first name" />
+                <label for="last-name">Last Name</label>
+                <input class="form-control" id="last-name" formControlName="lastName" type="text" placeholder="last name" />
+                <label for="email">Email</label>
+                <input class="form-control" id="email" formControlName="email" type="email" placeholder="email" />
+            </div>
+            <div class="form-group mt-2">
+                <button class="btn btn-primary">Apply Now</button>
+            </div>
+          </form>
+    </div>
+</div>

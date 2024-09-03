@@ -1,0 +1,13 @@
+<section>
+    <div>
+        <!-- <div class="col-md-4">name: {{housingLocation.name}}</div> -->
+        <!-- <img [src]="housingLocation.imagePath" width="50" height="50"> -->
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" [src]="housingLocation.imagePath" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">{{housingLocation.name}} : {{housingLocation.city}}</p>
+              <a [routerLink]="['/details', housingLocation.id]">Learn More ></a>
+            </div>
+          </div>
+    </div>
+</section>
